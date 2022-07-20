@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>LMS Login </title>
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div id="heading">
+                <h2>FCIT</h2>
+                <h3>Department of Data Science</h3>
+            </div>
+            
+            <div class="button-box">
+                <div id="button"></div>
+                    <button type="button" class="toggle-button" onclick="student()">student</button>
+                    <button type="button" class="toggle-button" onclick="teacher()">teacher</button>
+            </div>
+            <form class="input-group" id="student" action="student.html">
+                <b>Username:</b>
+                <input type="text"class="input-field" placeholder="user id" required>
+                <b>Password:</b>
+                <input type="password"class="input-field" placeholder="enter password" required>
+                <input type="checkbox"  class="checkbox"><span>Remember password</span>
+                <button type="submit" class="submit-button">Log In</button> 
+            </form>
+            <form class="input-group" id="teacher" action="teachers.html">
+                <b><small>Teacher Id:</small></b>
+                <input type="text"class="input-field" placeholder="user id" required>
+                <b><small>Password:</small></b>
+                <input type="password"class="input-field" placeholder="enter password" required>
+                <input type="text" class="input-field" placeholder="course code" required>
+                <input type="checkbox"  class="checkbox"><span>Remember password</span>
+                <button type="submit" class="submit-button">Log In</button> 
+            </form>
+        </div>
+        
+    </div>
+    <script>
+        var x = document.getElementById("student");
+        var y = document.getElementById("teacher");
+        var z = document.getElementById("button");
+        function student(){x.style.left="-400px";y.style.left="50px";z.style.left="110px" }
+        function teacher(){x.style.left="50px";y.style.left="450px";z.style.left="0px" }
+    </script>
+
+</body>
+</html>
